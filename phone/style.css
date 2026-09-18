@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 30px;
+    background-color: #212529;
+    color: white;
+    font-family: "Roboto", "Noto Sans JP", sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.phone {
+    width: 360px;
+    aspect-ratio: 9 / 20;
+    border: 6px solid black;
+    outline: 3px solid white;
+    border-radius: 50px;
+    background-color: black;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: -2;
+}
+
+.bg {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #ffe9a7;
+    opacity: 0.6;
+}
+
+/* https://125naroom.com/web/3737#%e8%83%8c%e6%99%af%e3%83%91%e3%82%bf%e3%83%bc%e3%83%b3_%e6%b3%a2%e7%8a%b6 */
+.Wavy {
+    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #ffe9a7 20px), repeating-linear-gradient(#ffc10755, #ffc107);
+}
+
+.statusbar {
+    font-size: 85%;
+    height: 50px;
+    background-color: #00000088;
+    padding: 0 25px 0 25px;
+    display: flex;
+    align-items: center;
+    min-height: 25px;
+}
+
+.statusbar .material-symbols-outlined {
+    font-size: 1em;
+    transform: translateY(1.5px);
+}
+
+.statusbar .left {
+    margin-right: auto;
+}
+
+.statusbar .left span {
+    margin-right: 3px;
+}
+
+.statusbar .right {
+    margin-left: auto;
+}
+
+.statusbar .right span {
+    margin-left: 3px;
+}
+
+.statusbar .right .battery-percentage {
+    margin-left: 0px;
+}
+
+.statusbar .camera {
+    margin: auto;
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.apps {
+    margin: 10px;
+    display: grid;
+    grid-template: repeat(8, 1fr) / repeat(5, 1fr);
+    height: 100%;
+    flex: 1;
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+    font-size: 0.8em;
+    display: grid;
+    place-items: center;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 5px;
+    background-color: white;
+    color: black;
+    display: grid;
+    place-items: center;
+}
+
+.app .label {
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*Individual App Settings */
+
+.app-files {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.app-files>.icon {
+    background-color: rgb(73, 131, 255);
+}
+
+.app-video {
+    grid-column: 5;
+    grid-row: 1;
+}
+
+.app-video>.icon {
+    background-color: cyan;
+}
+
+.app-game {
+    grid-column: 5;
+    grid-row: 7;
+}
+
+.app-game>.icon {
+    background-color: greenyellow;
+}
+
+.app-settings {
+    grid-column: 5;
+    grid-row: 8;
+}
+
+.app-settings>.icon {
+    background-color: cadetblue;
+}
