@@ -1,4 +1,4 @@
 # Practice
-My practice repository
+My practice repository!
 
 [Phone Screen](./phone) (HTML, CSS)
